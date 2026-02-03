@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #020617, #1e293b);
+  color: #e5e7eb;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 40px;
+  background: rgba(255,255,255,0.08);
+}
+
+.nav-links a {
+  margin-left: 20px;
+  color: #38bdf8;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Pages */
+.page {
+  padding: 80px;
+  text-align: center;
+}
+
+.page h1 {
+  margin-bottom: 15px;
+}
