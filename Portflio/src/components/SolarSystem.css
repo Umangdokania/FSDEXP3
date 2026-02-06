@@ -1,0 +1,111 @@
+/* Neural Network Container */
+.neural-network {
+  position: fixed;
+  top: 90px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 160px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* Connection lines background */
+.neural-network::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(139, 92, 246, 0.3) 20%,
+    rgba(139, 92, 246, 0.5) 50%,
+    rgba(139, 92, 246, 0.3) 80%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.nodes-container {
+  display: flex;
+  gap: 45px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+  pointer-events: all;
+  position: relative;
+}
+
+/* Neural connection dots */
+.nodes-container::before,
+.nodes-container::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  background: rgba(139, 92, 246, 0.6);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.8);
+  animation: dotPulse 2s ease-in-out infinite;
+}
+
+.nodes-container::before {
+  left: 10%;
+}
+
+.nodes-container::after {
+  right: 10%;
+  animation-delay: 1s;
+}
+
+@keyframes dotPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.5);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .nodes-container {
+    gap: 35px;
+  }
+  
+  .neural-network::before {
+    width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .neural-network {
+    top: 70px;
+    height: 140px;
+  }
+  
+  .nodes-container {
+    gap: 22px;
+    padding: 0 20px;
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+  
+  .neural-network::before {
+    width: 400px;
+  }
+  
+  .nodes-container::before,
+  .nodes-container::after {
+    display: none;
+  }
+}

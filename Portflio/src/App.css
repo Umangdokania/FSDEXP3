@@ -1,0 +1,25 @@
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.content-layer {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  min-height: 100vh;
+  padding: 80px 20px 40px;
+  pointer-events: none;
+}
+
+.content-layer > * {
+  pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+  .content-layer {
+    padding: 60px 15px 30px;
+  }
+}
