@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1e293b, #020617);
+  color: #e5e7eb;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+p {
+  color: #cbd5f5;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.card {
+  background: rgba(255,255,255,0.08);
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.profile-card {
+  background: rgba(255,255,255,0.08);
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 400px;
+}
+.subtitle {
+  color: #94a3b8;
+  margin-bottom: 30px;
+}
+
+/* Stat cards */
+.stat-card {
+  position: relative;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Status badge */
+.status {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.status.active {
+  background: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+}
+
+/* Activity section */
+.activity-section {
+  margin-top: 50px;
+  background: rgba(255,255,255,0.06);
+  padding: 25px;
+  border-radius: 16px;
+}
+
+.activity-section h2 {
+  margin-bottom: 15px;
+}
+
+.activity-section ul {
+  list-style: none;
+}
+
+.activity-section li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  color: #cbd5f5;
+}
+/* Login */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  width: 360px;
+  background: rgba(255,255,255,0.08);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  text-align: center;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 10px;
+  border: none;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.error {
+  color: #f87171;
+  margin-top: 8px;
+}
+
+.hint {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-top: 10px;
+}
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-card {
+  width: 360px;
+  padding: 35px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 18px;
+  text-align: center;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 8px;
+  border: none;
+}
+
+.auth-card button {
+  width: 100%;
+  padding: 12px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.auth-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  background: rgba(255,255,255,0.1);
+}
